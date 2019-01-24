@@ -2,7 +2,8 @@
   <div id="app">
     <div class="frame">
       <app-header></app-header>
-      <app-input></app-input>
+      <app-input @addItem="addTextItem"></app-input>
+      <app-item v-for="todo in todos" v-bind:todo="todo" @removeItem="removeTextItem" :key="todo.id"></app-item>
     </div>
   </div>
 </template>
@@ -10,11 +11,33 @@
 <script>
   import Header from './components/Header.vue';
   import Input from './components/Input.vue';
+  import Item from './components/Item.vue';
 
   export default {
+    data() {
+      return {
+        todos: [
+          {id: 0, text: "Play soccer."},
+          {id: 1, text: "Play basketball."},
+          {id: 2, text: "Play handball."}
+        ],
+        nextId: 3
+      }
+    },
     components: {
       appHeader: Header,
-      appInput: Input
+      appInput: Input,
+      appItem: Item
+    },
+    methods: {
+      addTextItem(inputText) {
+        this.todos.push({id: this.nextId, text: inputText});
+        this.nextId++;
+      },
+      removeTextItem(id) {
+        const todos = this.todos;
+        this.todos = todos.filter(function(todo) { return todo.id != id });
+      }
     }
   }
 </script>

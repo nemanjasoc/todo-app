@@ -1,7 +1,7 @@
 <template>
 	<div class="input-field">
 		<input type="text" v-model="inputText">
-		<button class="submit-button" @click="addText">Submit</button>
+		<button class="submit-button" @click="addTodo">Submit</button>
 	</div>
 </template>
 
@@ -13,8 +13,8 @@
 			}
 		},
 		methods: {
-			addText() {
-				this.$emit('todo:add', this.inputText);
+			addTodo() {
+				this.$emit('addItem', this.inputText);
 				this.inputText = '';
 			}
 		}
@@ -29,6 +29,7 @@
 		margin-right: 10px;
 		padding: 5px;
 		line-height: 17px;
+		font-size: 16px;
 	}
 
 	input:focus {
@@ -41,7 +42,7 @@
 	.submit-button {
 		background: #2196F3;
 		border: 2px solid blue;
-		padding: 5px;
+		padding: 7px;
 		border-radius: 4px;
 		cursor: pointer;	
 	}
