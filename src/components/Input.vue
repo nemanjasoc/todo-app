@@ -27,9 +27,9 @@
 		border: none;
 		border: 2px solid blue;
 		margin-right: 10px;
-		padding: 5px;
+		padding: 6px;
 		line-height: 17px;
-		font-size: 16px;
+		font-size: 17px;
 	}
 
 	input:focus {
@@ -42,7 +42,7 @@
 	.submit-button {
 		background: #2196F3;
 		border: 2px solid blue;
-		padding: 7px;
+		padding: 8px;
 		border-radius: 4px;
 		cursor: pointer;	
 	}

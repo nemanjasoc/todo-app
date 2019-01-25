@@ -26,11 +26,11 @@
 	.remove-btn {
 		background: #ff00009e;
 		border: 2px #ff00009e;
-		padding: 5px;
+		padding: 10px;
 		border-radius: 4px;
 		cursor: pointer;
 		margin-right: 20px;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 
 	.remove-btn:hover {
