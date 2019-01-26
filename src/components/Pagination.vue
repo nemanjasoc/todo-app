@@ -1,7 +1,7 @@
 <template>
 	<div v-if="totalPage() > 0" class="pagination-wraper">
 		<span v-if="previousLink()" class="pagination-btn" @click="updatePage(currentPage - 1)"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></span>
-		{{ currentPage + 1 }} of {{ totalPage() }}
+		<span class="pages">{{ currentPage + 1 }} of {{ totalPage() }}</span>
 		<span v-if="nextLink()" class="pagination-btn" @click="updatePage(currentPage + 1)"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></span>
 	</div>
 </template>
@@ -32,10 +32,9 @@
 
 <style>
 	.pagination-wraper {
-		background: gray;
 		padding: 8px;
-		margin: 0px 150px;
-		font-size: 19px;
+		margin: 20px 150px;
+		font-size: 30px;
 	}
 
 	.pagination-btn {
@@ -43,10 +42,16 @@
 	}
 
 	.pagination-btn .fa-arrow-circle-left {
-		font-size: 19px;
+		font-size: 25px;
+		color: white;
 	}
 
 	.pagination-btn .fa-arrow-circle-right {
-		font-size: 19px;
+		font-size: 25px;
+		color: white;
+	}
+
+	.pages {
+		color: black;
 	}
 </style>

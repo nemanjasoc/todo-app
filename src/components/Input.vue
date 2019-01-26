@@ -1,7 +1,7 @@
 <template>
 	<div class="input-field">
-		<input type="text" v-model="inputText">
-		<button class="submit-button" @click="addTodo">Submit</button>
+		<input type="text" v-model="inputText" placeholder="What do you need to do?">
+		<div class="submit-button" @click="addTodo">Add</div>
 	</div>
 </template>
 
@@ -22,29 +22,51 @@
 </script>
 
 <style scoped>
+	.input-field {
+		display: flex;
+    	justify-content: space-between;
+    	margin: 0px 10px;
+	}
+
 	input {
-		width: 75%;
+		width: 89%;
 		border: none;
-		border: 2px solid blue;
-		margin-right: 10px;
-		padding: 6px;
-		line-height: 17px;
-		font-size: 17px;
+		border-bottom: 2px solid #f0e9e9e3;
+		line-height: 38px;
+		font-size: 23px;
+		margin-right: 5px;
+		background-color: transparent;
+		color: white;
 	}
 
 	input:focus {
 		outline: none;
 		border: none;
-		border: 2px solid blue;
-		border-bottom: 2px solid blue;
+		border-bottom: 2px solid #f0e9e9e3;
+	}
+
+	input::-webkit-input-placeholder {
+		color: #f0e9e9e3 !important;
+	}
+	 
+	input:-moz-placeholder { 
+		color: #f0e9e9e3 !important;  
+	}
+	 
+	input::-moz-placeholder {  
+		color: #f0e9e9e3 !important;  
+	}
+	 
+	input:-ms-input-placeholder {  
+		color: #f0e9e9e3 !important;  
 	}
 
 	.submit-button {
-		background: #2196F3;
-		border: 2px solid blue;
+		border: 1px solid white;
 		padding: 8px;
 		border-radius: 4px;
-		cursor: pointer;	
+		cursor: pointer;
+		color: white;	
 	}
 
 	.submit-button:hover {

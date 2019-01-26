@@ -29,20 +29,20 @@
     data() {
       return {
         todos: [
-          {id: 1, text: "Play soccer."},
-          {id: 2, text: "Play basketball."},
-          {id: 3, text: "Play handball."},
-          {id: 4, text: "Sport #4."},
-          {id: 5, text: "Sport #5."},
-          {id: 6, text: "Sport #6."},
-          {id: 7, text: "Sport #7."},
-          {id: 8, text: "Sport #8."},
-          {id: 9, text: "Sport #9."},
-          {id: 10, text: "Sport #10."},
-          {id: 11, text: "Sport #11."},
-          {id: 12, text: "Sport #12."},
-          {id: 13, text: "Sport #13."},
-          {id: 14, text: "Sport #14."}
+          {id: 1, text: "Get up at 7 am."},
+          {id: 2, text: "Get a fire."},
+          {id: 3, text: "Learn programming."},
+          {id: 4, text: "Make a lunch."},
+          {id: 5, text: "Todo #5."},
+          {id: 6, text: "Todo #6."},
+          {id: 7, text: "Todo #7."},
+          {id: 8, text: "Todo #8."},
+          {id: 9, text: "Todo #9."},
+          {id: 10, text: "Todo #10."},
+          {id: 11, text: "Todo #11."},
+          {id: 12, text: "Todo #12."},
+          {id: 13, text: "Todo #13."},
+          {id: 14, text: "Todo #14."}
         ],
         nextId: 15,
         currentPage: 0,
@@ -75,7 +75,8 @@
         this.updateVisibleTodoItems();
       },
       updateVisibleTodoItems() {
-        this.visibleTodoItems = this.todos.slice(this.currentPage * this.pageSize, (this.currentPage * this.pageSize) + this.pageSize); 
+        this.visibleTodoItems = this.todos.slice(this.currentPage * this.pageSize, (this.currentPage * this.pageSize) + this.pageSize);
+
         if (this.visibleTodoItems.length == 0 && this.currentPage > 0) {
           this.updatePage(this.currentPage - 1)
         }
@@ -85,21 +86,23 @@
 </script>
 
 <style>
-  .app {
+  body {
+    background: #7FDBFF;
+    background-image: linear-gradient(to right, #0040ffbd, #008004b5);
+  }
+  #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 100px;
   }
 
   .frame {
     margin: 20px auto 20px auto;
-    width: 425px;
+    max-width: 650px;
     min-height: 410px;
-    border: 5px solid black;
     text-align: center;
-    background: #00805da3;
   }
 </style>

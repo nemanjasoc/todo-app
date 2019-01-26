@@ -1,9 +1,13 @@
 <template>
-	<h1>Vue Todos App</h1>
+	<div class="header">Vue Todos App</div>
 </template>
 
 <script>	
 </script>
 
-<style>
+<style scoped>
+	.header {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
 </style>
