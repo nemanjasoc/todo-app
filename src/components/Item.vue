@@ -1,7 +1,8 @@
 <template>
 	<div class="item-wraper">
 		<label class="container">
-			<input type="checkbox">{{ todo.text }}
+			<input type="checkbox">
+			<label class="strikethrough">{{ todo.text }}</label>
 			<span class="checkmark"></span>
 		</label>
 		<span class="remove-btn" @click="removeTodo"><i class="fa fa-minus-square-o" aria-hidden="true"></i></span>
@@ -21,19 +22,18 @@
 
 <style scoped>
 	.item-wraper {
-		display: flex;
-		justify-content: space-between;
 		background: white;
 		margin: 20px 10px 10px 10px;
 		font-size: 21px;
-		line-height: 55px;
 		border-radius: 3px;
+		width: 420px;
+		word-wrap: break-word;
 	}
 
 	.container {
 		display: block;
 		position: relative;
-		padding-left: 55px;
+		padding-left: 25px;
 		cursor: pointer;
 		-webkit-user-select: none;
 		-moz-user-select: none;
@@ -42,49 +42,38 @@
 	}
 
 	.container input {
-		position: absolute;
 		opacity: 0;
 		cursor: pointer;
-		height: 0;
-		width: 0;
 	}
 
 	.checkmark {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 15px;
+		left: 15px;
 		height: 25px;
 		width: 25px;
-		margin-top: 15px;
-		margin-left: 15px;
 		border-radius: 50%;
 		border: 1px solid #008000a3;
 	}
 
-	/* On mouse-over, add a grey background color */
 	.container:hover input ~ .checkmark {
 		background-color: #ccc;
 	}
 
-	/* When the checkbox is checked, add a blue background */
 	.container input:checked ~ .checkmark {
 		background-color: #008004b5;
-
 	}
 
-	/* Create the checkmark/indicator (hidden when not checked) */
 	.checkmark:after {
 		content: "";
 		position: absolute;
 		display: none;
 	}
 
-	/* Show the checkmark when checked */
 	.container input:checked ~ .checkmark:after {
 		display: block;
 	}
 
-	/* Style the checkmark/indicator */
 	.container .checkmark:after {
 		left: 9px;
 		top: 5px;
@@ -97,9 +86,20 @@
 		transform: rotate(45deg);
 	}
 
+	.strikethrough {
+		position: relative;
+		top: 17px;
+		left: 4px;
+	}
+
+	input[type=checkbox]:checked + label.strikethrough {
+		text-decoration: line-through;
+	}
+
 	.remove-btn {
 		position: relative;
-		top: 15px;
+		top: 4px;
+		left: 388px;
 	}
 
 	.remove-btn .fa-minus-square-o {

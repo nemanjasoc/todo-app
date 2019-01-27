@@ -1,5 +1,5 @@
 <template>
-	<div class="input-field">
+	<div class="form-group">
 		<input type="text" v-model="inputText" placeholder="What do you need to do?">
 		<div class="submit-button" @click="addTodo">Add</div>
 	</div>
@@ -22,19 +22,18 @@
 </script>
 
 <style scoped>
-	.input-field {
+	.form-group {
 		display: flex;
-    	justify-content: space-between;
-    	margin: 0px 10px;
+		margin: 0px 10px;
 	}
 
 	input {
-		width: 89%;
+		width: 100%;
 		border: none;
 		border-bottom: 2px solid #f0e9e9e3;
 		line-height: 38px;
 		font-size: 23px;
-		margin-right: 5px;
+		margin-right: 10px;
 		background-color: transparent;
 		color: white;
 	}
@@ -47,18 +46,22 @@
 
 	input::-webkit-input-placeholder {
 		color: #f0e9e9e3 !important;
+		opacity: 0.4;
 	}
 	 
 	input:-moz-placeholder { 
-		color: #f0e9e9e3 !important;  
+		color: #f0e9e9e3 !important;
+		opacity: 0.4;  
 	}
 	 
 	input::-moz-placeholder {  
-		color: #f0e9e9e3 !important;  
+		color: #f0e9e9e3 !important;
+		opacity: 0.4;  
 	}
 	 
 	input:-ms-input-placeholder {  
-		color: #f0e9e9e3 !important;  
+		color: #f0e9e9e3 !important;
+		opacity: 0.4;  
 	}
 
 	.submit-button {

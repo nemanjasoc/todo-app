@@ -32,8 +32,8 @@
 
 <style>
 	.pagination-wraper {
-		padding: 8px;
-		margin: 20px 150px;
+		display: flex;
+		justify-content: center;
 		font-size: 30px;
 	}
 
@@ -44,14 +44,17 @@
 	.pagination-btn .fa-arrow-circle-left {
 		font-size: 25px;
 		color: white;
+		opacity: 0.5;
 	}
 
 	.pagination-btn .fa-arrow-circle-right {
 		font-size: 25px;
 		color: white;
+		opacity: 0.5;
 	}
 
 	.pages {
-		color: black;
+		color: #2c3e50;
+		margin: 0px 8px;
 	}
 </style>
