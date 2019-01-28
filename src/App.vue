@@ -31,7 +31,7 @@
           {id: 2, text: "Get a fire."},
           {id: 3, text: "Learn programming."},
           {id: 4, text: "Make a lunch."},
-          {id: 5, text: "Todo #7."},
+          {id: 5, text: "Wash car."},
           {id: 6, text: "Todo #6."},
           {id: 7, text: "Todo #7."},
           {id: 8, text: "Todo #8."},

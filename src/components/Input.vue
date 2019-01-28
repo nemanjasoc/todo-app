@@ -1,7 +1,6 @@
 <template>
 	<div class="form-group">
-		<input type="text" v-model="inputText" placeholder="What do you need to do?">
-		<div class="submit-button" @click="addTodo">Add</div>
+		<input type="text" v-model="inputText" @keyup.enter="addTodo" placeholder="What do you need to do?">
 	</div>
 </template>
 
