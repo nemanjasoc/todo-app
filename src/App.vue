@@ -5,7 +5,7 @@
     <app-item
       v-for="todo in visibleTodoItems" 
       v-bind:todo="todo"
-      @removeItem="removeTextItem"  
+      @removeItem="removeTextItem" 
       :key="todo.id">
     </app-item>
     <app-pagination 

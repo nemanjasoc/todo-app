@@ -1,7 +1,7 @@
 <template>
 	<div class="item-wraper">
 		<label class="container">
-			<input type="checkbox">
+			<input type="checkbox" id="todo" value="todo" v-model="todo.checked">
 			<label class="strikethrough">{{ todo.text }}</label>
 			<span class="checkmark"></span>
 		</label>
