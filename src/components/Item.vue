@@ -20,7 +20,9 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+	@import "~styles/mixins";
+
 	.item-wraper {
 		background: white;
 		margin: 20px 10px 10px 10px;
@@ -35,15 +37,34 @@
 		position: relative;
 		padding-left: 25px;
 		cursor: pointer;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
+		@include item-container-vendors;
 
-	.container input {
-		opacity: 0;
-		cursor: pointer;
+		input {
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		&:hover input ~ .checkmark {
+			background-color: #ccc;
+		}
+
+		input:checked ~ .checkmark {
+			background-color: #008004b5;
+
+			&:after {
+				display: block;
+			}
+		}
+
+		.checkmark:after {
+			left: 9px;
+			top: 5px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			@include transform(rotate(45deg));
+		}
 	}
 
 	.checkmark {
@@ -54,36 +75,12 @@
 		width: 25px;
 		border-radius: 50%;
 		border: 1px solid #008000a3;
-	}
 
-	.container:hover input ~ .checkmark {
-		background-color: #ccc;
-	}
-
-	.container input:checked ~ .checkmark {
-		background-color: #008004b5;
-	}
-
-	.checkmark:after {
-		content: "";
-		position: absolute;
-		display: none;
-	}
-
-	.container input:checked ~ .checkmark:after {
-		display: block;
-	}
-
-	.container .checkmark:after {
-		left: 9px;
-		top: 5px;
-		width: 5px;
-		height: 10px;
-		border: solid white;
-		border-width: 0 3px 3px 0;
-		-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(45deg);
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
 	}
 
 	.strikethrough {
@@ -100,16 +97,16 @@
 		position: relative;
 		top: 4px;
 		left: 388px;
-	}
 
-	.remove-btn .fa-minus-square-o {
-		font-size: 25px;
-		padding: 5px;
-		cursor: pointer;
-		color: #8080809e;
-	}
+		.fa-minus-square-o {
+			font-size: 25px;
+			padding: 5px;
+			cursor: pointer;
+			color: #8080809e;
 
-	.remove-btn .fa-minus-square-o:hover {
-		color: red; 
+			&:hover {
+				color: red; 
+			}
+		}
 	}
 </style>

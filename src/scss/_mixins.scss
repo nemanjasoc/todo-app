@@ -1,0 +1,18 @@
+@mixin item-container-vendors {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
+}
+
+@mixin arrow-circle($font-size-arrow, $color-arrow, $opacity-arrow) {
+	font-size: $font-size-arrow;
+	color: $color-arrow;
+	opacity: $opacity-arrow;
+}

@@ -5,11 +5,13 @@
 <script>	
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+	@import "~styles/variables";
+
 	h1 {
 		font-size: 40px;
 		margin-bottom: 20px;
-		color: #2c3e50;
+		color: $header-pagination;
 		text-align: center;
 		font-weight: lighter;
 	}

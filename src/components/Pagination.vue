@@ -30,7 +30,10 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
+	@import "~styles/variables";
+	@import "~styles/mixins";
+
 	.pagination-wraper {
 		display: flex;
 		justify-content: center;
@@ -39,22 +42,18 @@
 
 	.pagination-btn {
 		cursor: pointer;
-	}
 
-	.pagination-btn .fa-arrow-circle-left {
-		font-size: 25px;
-		color: white;
-		opacity: 0.5;
-	}
+		.fa-arrow-circle-left {
+			@include arrow-circle(25px, white, 0.5);
+		}
 
-	.pagination-btn .fa-arrow-circle-right {
-		font-size: 25px;
-		color: white;
-		opacity: 0.5;
+		.fa-arrow-circle-right {
+			@include arrow-circle(25px, white, 0.5);
+		}
 	}
 
 	.pages {
-		color: #2c3e50;
+		color: $header-pagination;
 		margin: 0px 8px;
 	}
 </style>
