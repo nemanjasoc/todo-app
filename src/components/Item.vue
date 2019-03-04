@@ -95,8 +95,8 @@
 
 	.remove-btn {
 		position: relative;
-		top: 4px;
-		left: 388px;
+		bottom: -4px;
+		right: -388px;
 
 		.fa-minus-square-o {
 			font-size: 25px;

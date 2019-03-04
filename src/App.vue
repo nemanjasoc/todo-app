@@ -41,7 +41,7 @@
         ],
         nextId: 12,
         currentPage: 0,
-        pageSize: 3,
+        pageSize: 5,
         visibleTodoItems: []
       };
     },
@@ -56,7 +56,7 @@
     },
     methods: {
       addTextItem(inputText) {
-        this.todos.push({id: this.nextId, text: inputText});
+        this.todos.unshift({id: this.nextId, text: inputText});
         this.nextId++;
         this.updateVisibleTodoItems();
       },
@@ -92,6 +92,5 @@
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin-top: 140px;
   }
 </style>

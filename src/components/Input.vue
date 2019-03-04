@@ -29,7 +29,7 @@
 	}
 
 	input {
-		width: 100%;
+		width: 420px;
 		border: none;
 		border-bottom: $input-border-bottom;
 		line-height: 38px;
